@@ -94,7 +94,7 @@ def plot_decision_boundary_and_metrics(
     )
 
     fig.update_layout(
-        height=300,
+        height=400,
     )
 
     return fig
