@@ -43,7 +43,6 @@ def model_selector():
             "Choose a model",
             (
                 "Logistic Regression",
-                "Decision Tree",
                 "Random Forest",
                 "K Nearest Neighbors",
                 "Support Vector Machine"
