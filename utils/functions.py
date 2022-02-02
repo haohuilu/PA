@@ -77,10 +77,9 @@ def plot_decision_boundary_and_metrics(
             domain={"x": [0, 1], "y": [0, 1]},
             gauge={"axis": {"range": [0, 1]}},
         ),
-        row=1,
+        row=2,
         col=1,
     )
-    
 
     fig.add_trace(
         go.Indicator(
@@ -90,7 +89,7 @@ def plot_decision_boundary_and_metrics(
             domain={"x": [0, 1], "y": [0, 1]},
             gauge={"axis": {"range": [0, 1]}},
         ),
-        row=1,
+        row=2,
         col=2,
     )
 
@@ -99,6 +98,7 @@ def plot_decision_boundary_and_metrics(
     )
 
     return fig
+
 
 
 def train_model(model, x_train, y_train, x_test, y_test):
