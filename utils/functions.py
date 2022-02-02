@@ -75,7 +75,7 @@ def plot_decision_boundary_and_metrics(
             value=metrics["test_accuracy"],
             title={"text": f"Test Accuracy (%)"},
             domain={"x": [0, 1], "y": [0, 1]},
-            gauge={"axis": {"range": [0, 1]}},
+            gauge={"axis": {"range": [0, 100]}},
         ),
         row=2,
         col=1,
