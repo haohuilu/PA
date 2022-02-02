@@ -24,7 +24,7 @@ def lr_param_selector():
     random_state = 1
     #max_iter = st.number_input("max_iter", 100, 2000, step=50, value=100)
 
-    params = {"solver": solver, "penalty": penalty, "C": C, "max_iter": max_iter, "random_state": random_state}
+    params = {"solver": solver, "penalty": penalty, "C": C, "random_state": random_state}
 
     model = LogisticRegression(**params)
     return model
