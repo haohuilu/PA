@@ -21,9 +21,10 @@ def lr_param_selector():
     penalty = st.selectbox("penalty", options=penalties)
     C = st.number_input("C", 100)
     C = np.round(C, 3)
+    random_state = 1
     #max_iter = st.number_input("max_iter", 100, 2000, step=50, value=100)
 
-    params = {"solver": solver, "penalty": penalty, "C": C, "max_iter": max_iter, "random_state": 1}
+    params = {"solver": solver, "penalty": penalty, "C": C, "max_iter": max_iter, "random_state": random_state}
 
     model = LogisticRegression(**params)
     return model
