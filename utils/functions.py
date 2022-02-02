@@ -58,7 +58,18 @@ def plot_decision_boundary_and_metrics(
 
 
 
-    fig = 
+    fig = make_subplots(
+        rows=1,
+        cols=2,
+        specs=[[{"colspan": 2}, None], [{"type": "indicator"}, {"type": "indicator"}]],
+        subplot_titles=("Model Performance", None, None),
+        row_heights=[0.3, 0.30],
+    )
+
+
+
+
+    fig.add_trace(
         go.Indicator(
             mode="gauge+number+delta",
             value=metrics["test_accuracy"],
@@ -66,8 +77,9 @@ def plot_decision_boundary_and_metrics(
             domain={"x": [0, 1], "y": [0, 1]},
             gauge={"axis": {"range": [0, 1]}},
         ),
-        row=2,
+        row=1,
         col=1,
+    )
     
 
     fig.add_trace(
@@ -78,12 +90,12 @@ def plot_decision_boundary_and_metrics(
             domain={"x": [0, 1], "y": [0, 1]},
             gauge={"axis": {"range": [0, 1]}},
         ),
-        row=2,
+        row=1,
         col=2,
     )
 
     fig.update_layout(
-        height=500,
+        height=300,
     )
 
     return fig
