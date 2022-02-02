@@ -63,7 +63,7 @@ def plot_decision_boundary_and_metrics(
         cols=2,
         specs=[[{"colspan": 2}, None], [{"type": "indicator"}, {"type": "indicator"}]],
         subplot_titles=("Model Performance", None, None),
-        row_heights=[0.3, 0.30],
+        row_heights=[0.1, 0.1],
     )
 
 
