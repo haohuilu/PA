@@ -4,12 +4,15 @@ from sklearn.neighbors import KNeighborsClassifier
 
 def knn_param_selector():
 
-    n_neighbors = st.number_input("n_neighbors", 5, 20, 5, 1)
+    n_neighbors = st.number_input("n_neighbors", 3, 20, 5, 1)
     metric = st.selectbox(
-        "metric", ("minkowski", "euclidean", "manhattan", "chebyshev", "mahalanobis")
+        "metric", ("manhattan", "chebyshev", "mahalanobis")
+    )
+    weights = st.selectbox(
+        "weights", ("distance", "uniform")
     )
 
-    params = {"n_neighbors": n_neighbors, "metric": metric}
+    params = {"n_neighbors": n_neighbors, "metric": metric, "weights":weights}
 
     model = KNeighborsClassifier(**params)
     return model
