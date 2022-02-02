@@ -4,11 +4,11 @@ from sklearn.ensemble import RandomForestClassifier
 
 def rf_param_selector():
 
-    criterion = st.selectbox("criterion", ["entropy", "gini"])
-    n_estimators = st.number_input("n_estimators", 10, 300, 100, 50)
-    max_depth = st.number_input("max_depth", 9, 10, 5, 1)
-    min_samples_split = st.number_input("min_samples_split", 2,1)
-    max_features = st.selectbox("max_features", ["log2", "auto"])
+    criterion = st.selectbox("criterion", ["entropy"])
+    n_estimators = st.number_input("n_estimators", 10)
+    max_depth = st.number_input("max_depth", 9)
+    min_samples_split = st.number_input("min_samples_split", 2)
+    max_features = st.selectbox("max_features", ["log2"])
     random_state = 0
 
     params = {
