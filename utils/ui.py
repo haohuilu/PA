@@ -16,7 +16,7 @@ from utils.functions import img_to_bytes
 
 
 def introduction():
-    st.title("**Welcome to playground for project analytics**")
+    st.title("**Machine Learning in Project Analytics: Case Study**")
     st.subheader(
         """
         This is a place where we can get familiar with machine learning models directly from the browser
@@ -52,9 +52,6 @@ def model_selector():
 
         if model_type == "Logistic Regression":
             model = lr_param_selector()
-
-        elif model_type == "Decision Tree":
-            model = dt_param_selector()
 
         elif model_type == "Random Forest":
             model = rf_param_selector()
