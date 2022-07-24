@@ -4,8 +4,8 @@ from sklearn.svm import SVC
 
 
 def svc_param_selector():
-    C = st.number_input("C", 10)
+    C = st.number_input("C", 1.0, 0.01)
     kernel = st.selectbox("kernel", ("rbf", "linear", "poly", "sigmoid"))
-    params = {"C": C, "kernel": kernel}
+    params = {"C": C, "kernel": kernel, "random_state" : 1}
     model = SVC(**params)
     return model
