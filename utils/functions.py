@@ -111,10 +111,10 @@ def train_model(model, x_train, y_train, x_test, y_test):
     y_test_pred = model.predict(x_test)
 
     train_accuracy = np.round(accuracy_score(y_train, y_train_pred), 4)
-    train_f1 = np.round(f1_score(y_train, y_train_pred, average="binary"), 4)
+    train_f1 = np.round(f1_score(y_train, y_train_pred, average="micro"), 4)
 
     test_accuracy = np.round(accuracy_score(y_test, y_test_pred), 4)*100
-    test_f1 = np.round(f1_score(y_test, y_test_pred, average="binary"), 4)
+    test_f1 = np.round(f1_score(y_test, y_test_pred, average="micro"), 4)
 
     return model, train_accuracy, train_f1, test_accuracy, test_f1, duration
 
